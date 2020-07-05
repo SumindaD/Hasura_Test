@@ -4,7 +4,11 @@ pipeline {
             args '--privileged'
         } 
     }
-    stages {
+    stages { 
+        stage('Initialize'){
+            def dockerHome = tool 'DockerInstallation'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+        },
         stage('build') {
             steps {
                 sh 'hasura version'
