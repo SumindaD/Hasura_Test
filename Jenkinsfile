@@ -1,5 +1,9 @@
 pipeline {
-    agent { docker { image 'hasura/graphql-engine:latest' } }
+    agent { docker { 
+            image 'hasura/graphql-engine:latest' 
+            args '--privileged'
+        } 
+    }
     stages {
         stage('build') {
             steps {
