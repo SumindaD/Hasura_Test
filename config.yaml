@@ -1,7 +1,7 @@
 version: 2
-endpoint: http://localhost:8080/
+endpoint: http://64.227.10.255/
 metadata_directory: metadata
 migrations_directory: migrations
 actions:
   kind: synchronous
-  handler_webhook_baseurl: http://localhost:8080/
+  handler_webhook_baseurl: http://64.227.10.255/
